@@ -8,20 +8,20 @@ public class Pagamento {
 		double gasto = ler.nextDouble();
 		int menu = MontaMenu(gasto);
 		if (menu == 1) {
-			System.out.printf("Você irá pagar R$ %.2f\n", AVista(gasto));
+			System.out.printf("VocÃª irÃ¡ pagar R$ %.2f\n", AVista(gasto));
 		} else if (menu == 2) {
-			System.out.printf("Você irá pagar duas parcelas de R$ %.2f\n", Parc(gasto));
+			System.out.printf("VocÃª irÃ¡ pagar duas parcelas de R$ %.2f\n", Parc(gasto));
 		} else {
-			System.out.println("Em quantos meses você deseja pagar?");
+			System.out.println("Em quantos meses vocÃª deseja pagar?");
 			int mes = ler.nextInt();
 			while (mes > 10) {
-				System.out.println("Só até 10x, digite a quantidade de parcelas válidas");
+				System.out.println("SÃ³ atÃ© 10x, digite a quantidade de parcelas vÃ¡lidas");
 				mes = ler.nextInt();
 			}
-			System.out.printf("Você irá pagar durante meses, o valor de R$ %.2f\n", ParcG(gasto, mes));
+			System.out.printf("VocÃª irÃ¡ pagar durante meses, o valor de R$ %.2f\n", ParcG(gasto, mes));
 
 		}
-
+		System.out.println("Obrigado por usar o nosso programa!")	
 	}
 
 	public static double ParcG(double gasto, int mes) {
@@ -61,7 +61,7 @@ public class Pagamento {
 
 			if (gasto > 100) {
 				System.out.println(
-						"\nEscolha a forma de pagamento\n\n 1) A vista com 10% de desconto\n 2) Em duas vezes\n 3) De 3 até 10 vezes com 3% de juros (apenas compras acima de R$ 100,00)");
+						"\nEscolha a forma de pagamento\n\n 1) A vista com 10% de desconto\n 2) Em duas vezes\n 3) De 3 atÃ© 10 vezes com 3% de juros (apenas compras acima de R$ 100,00)");
 
 				a = ler.nextInt();
 				if (a == 1) {
@@ -73,7 +73,7 @@ public class Pagamento {
 				else if (a == 3) {
 					return 3;
 				} else {
-					System.out.println("Digite um número válido");
+					System.out.println("Digite um nÃºmero vÃ¡lido");
 					a = 6;
 				}
 
@@ -91,7 +91,7 @@ public class Pagamento {
 						return 3;
 
 					} else {
-						System.out.println("Digite uma opção válida");
+						System.out.println("Digite uma opÃ§Ã£o vÃ¡lida");
 						a = 6;
 
 					}
@@ -111,7 +111,7 @@ public class Pagamento {
 				}
 
 				else {
-					System.out.println("Digite um número válido");
+					System.out.println("Digite um nÃºmero vÃ¡lido");
 					a = 6;
 				}
 
@@ -124,7 +124,7 @@ public class Pagamento {
 						return 2;
 
 					} else {
-						System.out.println("Digite uma opção válida");
+						System.out.println("Digite uma opÃ§Ã£o vÃ¡lida");
 						a = 6;
 
 					}
