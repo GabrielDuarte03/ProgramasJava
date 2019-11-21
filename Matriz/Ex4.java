@@ -1,5 +1,5 @@
 import java.util.*;
-public class Exercicio4{
+public class Ex4{
 	public static void main(String[] args){
 		Scanner leia = new Scanner(System.in);
 		int matriz[][] = new int [4][4];
